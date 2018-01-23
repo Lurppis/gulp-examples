@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
 
 /**
  * Top level functions in gulp
@@ -35,3 +37,21 @@ gulp.task('minify', function () {
         .pipe(uglify())
         .pipe(gulp.dest('dist/js/  '));
 })
+
+// Compile sass
+gulp.task('sass', function () {
+    gulp.src('src/sass/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('dist/css'));
+});
+
+// Compile sass with minify option
+gulp.task('sass-min', function () {
+    gulp.src('src/sass/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({debug: true}, (details) => {
+            console.log(`${details.name}: ${details.stats.originalSize}`);
+            console.log(`${details.name}: ${details.stats.minifiedSize}`);
+          }))
+        .pipe(gulp.dest('dist/css'));
+});

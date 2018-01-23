@@ -23,7 +23,9 @@
   "homepage": "https://github.com/Lurppis/gulp-examples#readme",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
     "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0"
   }
 }
