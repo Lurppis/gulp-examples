@@ -13,10 +13,8 @@ const cleanCSS = require('gulp-clean-css');
  *      gulp.watch      - Watch files and folders for change
  */
 
-// Logs message
-gulp.task('default', function () {
-    return console.log('Gulp is running');
-});
+// All tasks in one command
+gulp.task('default', ['copy-html', 'imagemin', 'minify', 'sass-min']);
 
 // Copy all html files and put to dist folder
 gulp.task('copy-html', function () {
