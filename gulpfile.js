@@ -61,4 +61,12 @@ gulp.task('scripts', function() {
         .pipe(concat('myScripts.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
+});
+
+// Watch
+gulp.task('watch', function() {
+    gulp.watch('src/js/*.js', ['scripts']);
+    gulp.watch('src/images', ['imagemin']);
+    gulp.watch('src/sass', ['sass-min']);
+    gulp.watch('src/*.html', ['copy-html']);
 })
