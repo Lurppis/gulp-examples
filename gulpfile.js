@@ -13,3 +13,10 @@ const gulp = require('gulp');
 gulp.task('default', function() {
     return console.log('Gulp is running');
 });
+
+// Copy all html files and put to dist folder
+
+gulp.task('copy-html', function() {
+    gulp.src('src/*.html')
+        .pipe(gulp.dest('dist'));
+});
