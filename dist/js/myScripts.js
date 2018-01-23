@@ -1,0 +1,1 @@
+console.log("Test"),alert("Test alert"),console.log("Test2"),alert("Test alert2");

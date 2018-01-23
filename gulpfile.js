@@ -3,6 +3,7 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
+const concat = require('gulp-concat');
 
 /**
  * Top level functions in gulp
@@ -53,3 +54,11 @@ gulp.task('sass-min', function () {
           }))
         .pipe(gulp.dest('dist/css'));
 });
+
+// Scripts
+gulp.task('scripts', function() {
+    gulp.src('src/js/*.js')
+        .pipe(concat('myScripts.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
+})
