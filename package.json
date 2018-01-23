@@ -1,0 +1,27 @@
+{
+  "name": "gulp-example",
+  "version": "1.0.0",
+  "description": "This is a collection of the most commonly used gulp methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lurppis/gulp-examples.git"
+  },
+  "keywords": [
+    "gulp",
+    "node",
+    "js"
+  ],
+  "author": "Marcin Pilarczyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lurppis/gulp-examples/issues"
+  },
+  "homepage": "https://github.com/Lurppis/gulp-examples#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}
